@@ -1,6 +1,3 @@
-drop type string_type;
-
-
--- type en function om string in table type te ontleden
-create type string_type as table of varchar2(100)
+-- Oracle kent ook wel bv dbms_utility.name_array maar is beperkt qua max lengte
+create type string_type as table of varchar2(2000)
 /

@@ -1,19 +1,5 @@
-
-drop table key_value;
-
-drop table mutatie;
-
-drop sequence mut_seq;
-
-
-delete from user_sdo_geom_metadata
-where table_name = 'MUTATIE'; 
-
-commit;
-
-
-
 -- table mutatie
+-- key_velden en value_velden zijn een paar....mogelijk later 1 kolom met xml type
 create table mutatie
 (id	                     number                    primary key 
 ,guid	                   varchar2(1000)            not null 

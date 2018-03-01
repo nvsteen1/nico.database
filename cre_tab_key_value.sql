@@ -1,7 +1,3 @@
-
-drop sequence kve_seq;
-drop table key_value;
-
 -- key_value tabel
 create table key_value
 (id         number        primary key

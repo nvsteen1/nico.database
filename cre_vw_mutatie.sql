@@ -59,6 +59,12 @@ begin
 	)
   returning id into l_new_id;
   
+  /*
+    key_velden en value_velden als paar wegschrijven in de onderliggende tabel key_value
+	Dit is voor nu een tijdelijke oplossing....later wordt deze data mogelijk via een xml kolom  
+	vastgehouden.
+  */
+  
   for i in t_keys.first..t_keys.last
   loop
     insert into key_value
