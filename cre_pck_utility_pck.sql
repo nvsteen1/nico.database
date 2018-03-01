@@ -1,9 +1,19 @@
-drop package utility_pck;
-
-
 create package utility_pck
 is 
-
+  /*
+    splitst een string in delen...Voorbeeld:
+	declare
+      t test_type :=  f_convert ('1#2');
+    begin
+      for i in t.first..t.last
+      loop
+        dbms_output.put_line (t(i));
+      end loop;
+	end;
+    => 
+	1
+	2
+  */
   function split_string (p_list       in varchar2
                         ,p_delimiter  in varchar2 := '#'
                         )
